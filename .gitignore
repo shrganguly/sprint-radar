@@ -1,0 +1,10 @@
+shiproom-dashboard-*.html
+.ado_token_cache.bin
+icm_data.json
+icm_*.png
+*.xlsx
+!templates/Feature tracker_template.xlsx
+*.pptx
+*.pdf
+__pycache__/
+.claude/

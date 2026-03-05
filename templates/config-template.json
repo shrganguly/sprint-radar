@@ -1,0 +1,81 @@
+{
+  "_readme": "Shiproom Dashboard Config. Fill in fields marked REQUIRED. Delete this _readme field when done.",
+
+  "dashboard": {
+    "title": "My Team Shiproom View",
+    "_title_example": "Your team's dashboard title. Examples: 'Azure Core Shiproom View', 'Teams Backend Shiproom View'",
+
+    "subtitle": "Sprint Review Dashboard",
+    "_subtitle_example": "Small text above the title. Usually keep as-is.",
+
+    "team_name": "My Team",
+    "_team_name_example": "Shown in the footer. Examples: 'Azure Core', 'Teams Backend', 'OneDrive Sync'",
+
+    "source_label": "",
+    "_source_label_example": "Label for the Excel source link in footer. If empty, uses the Excel filename."
+  },
+
+  "paths": {
+    "excel_path": "REQUIRED -- C:\\Users\\you\\path\\to\\your-feature-tracker.xlsx",
+    "_excel_path_example": "Full path to your Excel tracker.",
+
+    "html_output_dir": null,
+    "_html_output_dir_example": "Where to save the HTML. null = same folder as Excel.",
+
+    "bug_data_fallback_path": null,
+    "_bug_data_fallback_path_example": "Cached bug data JSON for offline use. null = always query ADO live."
+  },
+
+  "excel": {
+    "sprint_tab_pattern": "Sprint {month_short} {year}",
+    "_sprint_tab_pattern_example": "How your sprint tabs are named. Variables: {month_short}=Mar, {year}=2026, {month_num}=03, {month_long}=March. Example result: 'Sprint Mar 2026'",
+
+    "dependencies_tab": null,
+    "_dependencies_tab_example": "Tab name for external dependencies. Set to null to skip. Examples: 'Partner Dependencies', null",
+
+    "em_tab": null,
+    "_em_tab_example": "Tab name for EM-to-IC mapping. Set to null to skip. Examples: 'EM', 'Team Structure', null"
+  },
+
+  "ado": {
+    "enabled": false,
+    "_enabled_example": "Set to true to enable ADO bug queries. Dashboard still works without it.",
+
+    "organization": "",
+    "_organization_example": "Your ADO org name (from https://dev.azure.com/{org}). Examples: 'onedrive', 'msazure', 'mycompany'",
+
+    "project": "",
+    "_project_example": "Your ADO project name. Examples: 'ODSP Product Experiences', 'Azure DevOps'",
+
+    "area_path": "",
+    "_area_path_example": "Your team's ADO area path for bug queries. Use double backslashes. Example: 'MyProject\\\\TeamA\\\\SubArea'",
+
+    "iteration_path_template": "{project}\\{cy}{half}\\{cy}{quarter}\\{year} - {month_num} {month_short}",
+    "_iteration_path_template_example": "Variables: {project}, {cy}=CY26, {half}=H1, {quarter}=Q1, {year}=2026, {month_num}=03, {month_short}=Mar. Adjust to match your ADO iteration naming."
+  },
+
+  "icm": {
+    "enabled": false,
+    "_enabled_example": "Set to true only if your team uses ICM. Most teams can leave this false.",
+
+    "active_query_url": "",
+    "_active_query_url_example": "ICM saved query URL for active incidents.",
+
+    "resolved_query_url": "",
+    "_resolved_query_url_example": "ICM saved query URL for resolved incidents.",
+
+    "data_file": "icm_data.json",
+    "_data_file_example": "Filename for cached ICM data. Usually keep as-is."
+  },
+
+  "em_layout": {
+    "enabled": false,
+    "_enabled_example": "Set to true if you have an EM tab and want the Resource Utilization view. When false, Owners column shows Dev IC name instead of EM name.",
+
+    "pairs": [],
+    "_pairs_example": "One entry per EM. Example for 2 EMs side-by-side: [{\"em_name_row\":2,\"em_col\":1,\"directs_col\":2}, {\"em_name_row\":2,\"em_col\":4,\"directs_col\":5}]"
+  },
+
+  "priority_order": { "P0": 0, "P1": 1, "P2": 2, "P3": 3 },
+  "_priority_order_example": "Priority labels and their sort order (lower = higher priority). Customize if your team uses different labels. Status order and rolled-out statuses are read directly from the Excel Config tab's StatusList column."
+}
