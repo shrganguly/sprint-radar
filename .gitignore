@@ -1,4 +1,4 @@
-shiproom-dashboard-*.html
+shiproom-dashboard*.html
 .ado_token_cache.bin
 icm_data.json
 icm_*.png
@@ -6,5 +6,11 @@ icm_*.png
 !templates/Feature tracker_template.xlsx
 *.pptx
 *.pdf
+*.txt
 __pycache__/
 .claude/
+config.json
+generate_dashboard.py
+cleanup_and_generate.py
+shiproom-talk-track.md
+_ul
