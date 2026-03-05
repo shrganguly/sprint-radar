@@ -4,7 +4,7 @@
 
 Every shiproom call is the same story -- hunt down the latest deck, manually update bug counts, copy-paste status from five different sources, and hope nothing is stale by the time you present. This tool eliminates all of that. Your feature crew maintains one source of truth: **Excel for features, ADO for bugs**. Run one command, get a fully up-to-date dashboard with live data. No slides to update, no numbers to chase.
 
-Built by the SPAI IDC team. Now available for every area to use.
+Built by the SharePoint team. Now available for every area to use.
 
 ---
 
